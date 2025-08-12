@@ -1,0 +1,11 @@
+class solution(object):
+    def twosum(self,nums,target):
+        dictionary={}
+        for i in range(len(nums)):
+            if nums[i] in dictionary:
+                return[dictionary[nums[i]],i]
+            else:
+                dictionary[target-nums[i]]=i
+nums=[2,7,11,15]
+target=9
+print(solution().twosum(nums,target))
